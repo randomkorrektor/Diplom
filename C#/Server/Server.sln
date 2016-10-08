@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{89E7F293-4396-419E-A329-7FA2456A4843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypes", "DataTipes\DataTypes.csproj", "{BED77896-8BA2-4A25-88F8-176697772256}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase", "DataBase\DataBase.csproj", "{86B8946E-3F86-4F37-A361-6388B64ACCDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89E7F293-4396-419E-A329-7FA2456A4843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E7F293-4396-419E-A329-7FA2456A4843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E7F293-4396-419E-A329-7FA2456A4843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E7F293-4396-419E-A329-7FA2456A4843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED77896-8BA2-4A25-88F8-176697772256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED77896-8BA2-4A25-88F8-176697772256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED77896-8BA2-4A25-88F8-176697772256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED77896-8BA2-4A25-88F8-176697772256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86B8946E-3F86-4F37-A361-6388B64ACCDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86B8946E-3F86-4F37-A361-6388B64ACCDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86B8946E-3F86-4F37-A361-6388B64ACCDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86B8946E-3F86-4F37-A361-6388B64ACCDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
