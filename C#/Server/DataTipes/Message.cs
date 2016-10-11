@@ -12,12 +12,14 @@ namespace DataTypes
         public string text { get; set; }
         public int idTo { get; set; }
         public int idFrom { get; set; }
+        public long date { get; set; }
 
         public Message()
         {
             text = "";
             idTo = 0;
             idFrom = 0;
+            date = 0;
         }
     }
 }

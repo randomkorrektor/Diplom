@@ -12,7 +12,7 @@ namespace DataTypes
         public string text { get; set; }
         public int idCreator { get; set; }
         public int idPost { get; set; }
-        public int date { get; set; }
+        public long date { get; set; }
 
         public Comment()
         {

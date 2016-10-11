@@ -17,19 +17,7 @@ namespace DataBase
         public DbSet<Post> posts { get; set; }
         public DbSet<User> users { get; set; }
 
-        private Context() { }
+        private Context(): base("name=ServerDB")
+        { }
     }
 }
-
-/*public class SchoolContext : DbContext
-        {
-            public DbSet<Student> Students { get; set; }
-            public DbSet<Enrollment> Enrollments { get; set; }
-            public DbSet<Course> Courses { get; set; }
-
-            protected override void OnModelCreating(DbModelBuilder modelBuilder)
-            {
-                modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            }
-        }
-*/

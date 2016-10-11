@@ -12,7 +12,7 @@ namespace DataTypes
         public string email { get; set; }
         public string password { get; set; }
         public string nickname { get; set; }
-        public int date { get; set; }
+        public long date { get; set; }
 
         public User()
         {

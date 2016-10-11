@@ -9,9 +9,10 @@ namespace DataBase
 {
     public static class UserManager
     {
+
         public static bool Registration(string email, string password)
         {
-            var users = Context.Instance.users.Where(u => u.email == email && u.password == password);
+            var users = Context.Instance.users.Where(u => u.email == email);
             if (users.Count() > 0)
             {
                 return false;
@@ -29,13 +30,16 @@ namespace DataBase
 
         public static int logIn(string email, string password)
         {
-            var user = Context.Instance.users.First(u => u.email == email && u.password == password);
-            if (user==null)
-            {
-                return -1;
-            }
-            return user.ID;
+            //try
+            //{
+                var user = Context.Instance.users.First(u => u.email == email && u.password == password);
+                return user.ID;
+            //}
+            //catch
+            //{
+            //    return -1;
+            //} 
+            
         }
-
     }
 }

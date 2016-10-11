@@ -7,8 +7,8 @@
     <ProjectGuid>{BED77896-8BA2-4A25-88F8-176697772256}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataTipes</RootNamespace>
-    <AssemblyName>DataTipes</AssemblyName>
+    <RootNamespace>DataTypes</RootNamespace>
+    <AssemblyName>DataTypes</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

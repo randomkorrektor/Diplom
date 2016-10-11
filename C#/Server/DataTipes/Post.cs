@@ -12,7 +12,7 @@ namespace DataTypes
         public string url { get; set; }
         public double geoposition { get; set; }
         public double azimut { get; set; }
-        public int  date { get; set; }
+        public long  date { get; set; }
         public int idCreator  { get; set; }
 
 public Post()
