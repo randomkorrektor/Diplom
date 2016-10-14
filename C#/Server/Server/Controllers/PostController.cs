@@ -20,7 +20,7 @@ namespace Server.Controllers
         }
 
         [HttpPost]
-        public bool CreatePost(string url, int geoposition, double azimut, int idCreator)
+        public bool CreatePost(string url, double geoposition, double azimut, int idCreator)
         {
             PostManager.CreatePost(url, geoposition, azimut, idCreator);
             return true;

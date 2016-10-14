@@ -21,24 +21,25 @@ namespace Server.Controllers
    public class UserController : ApiController
     {
         [HttpPost]
-        public int Registration([FromUri]string email, [FromUri]string password )
+        public string Registration([FromUri]string email, [FromUri]string password, [FromUri]string nickname)
         {
-            bool regQuestion = UserManager.Registration(email, password);
+            bool regQuestion = UserManager.Registration(email, password, nickname);
             if (regQuestion)
                 return UserManager.logIn(email, password);
             else
-                return -1;
+                return "Error";
             
         }
 
         [HttpGet]
-        public int LogIn([FromUri]string email,[FromUri]string password)
+        public string LogIn([FromUri]string email,[FromUri]string password)
         {
-            int userId = UserManager.logIn(email, password);
-            if (userId > 0)
-                return userId;
+            string userNick = "";
+            userNick= UserManager.logIn(email, password);
+            if (userNick!="Error")
+                return userNick;
             else
-                return -1;
+                return "Error";
         }
     }
 }

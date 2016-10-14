@@ -24,7 +24,7 @@ namespace DataBase
                 date = DateTime.Now.Ticks
             });
 
-            //Context.Instance.SaveChanges();
+            Context.Instance.SaveChanges();
         }
     }
 }

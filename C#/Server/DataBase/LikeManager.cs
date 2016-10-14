@@ -15,6 +15,7 @@ namespace DataBase
             {
                 var like = Context.Instance.likes.First(u => u.idCreator == idCreator && u.idPost == idPost);
                 Context.Instance.likes.Remove(like);
+                Context.Instance.SaveChanges();
             }
             catch
             {
@@ -24,7 +25,7 @@ namespace DataBase
                     idPost=idPost
                 });
 
-                //Context.Instance.SaveChanges();
+                Context.Instance.SaveChanges();
             }
         }
     }

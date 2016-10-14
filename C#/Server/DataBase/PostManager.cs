@@ -14,7 +14,7 @@ namespace DataBase
             return Context.Instance.posts.ToArray();
         }
 
-        public static void CreatePost(string url,int geoposition, double azimut, int idCreator)
+        public static void CreatePost(string url,double geoposition, double azimut, int idCreator)
         {
             Context.Instance.posts.Add(new Post()
             {
@@ -25,14 +25,14 @@ namespace DataBase
                 date = DateTime.Now.Ticks
             });
 
-            //Context.Instance.SaveChanges();
+            Context.Instance.SaveChanges();
         }
 
         public static void DeletePost(int id)
         {
             Post post = Context.Instance.posts.First(u => u.ID == id);
             Context.Instance.posts.Remove(post);
-            //Context.Instance.SaveChanges();
+            Context.Instance.SaveChanges();
         }
 
         //public static Post GetPost(int postID)
