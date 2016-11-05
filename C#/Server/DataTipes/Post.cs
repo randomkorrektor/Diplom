@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace DataTypes
 {
     public class Post
     {
-        public int ID { get; set; }
+
+        public ObjectId ID { get; set; }
         public string url { get; set; }
         public double geoposition { get; set; }
         public double azimut { get; set; }

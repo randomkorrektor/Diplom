@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace DataTypes
     /// </summary>
     public class Comment
     {
-        public int ID { get; set; }
+        public ObjectId ID { get; set; }
         public string text { get; set; }
         public int idCreator { get; set; }
         public int idPost { get; set; }
