@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataTypes
 {
+    /// <summary>
+    /// Datatype for comment
+    /// </summary>
     public class Comment
     {
         public int ID { get; set; }
