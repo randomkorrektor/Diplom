@@ -21,7 +21,7 @@ namespace DataBase
                 text = text,
                 idTo = idTo,
                 idFrom = idFrom,
-                date = DateTime.Now.Ticks
+                date = DateTime.Now
             });
 
             Context.Instance.SaveChanges();

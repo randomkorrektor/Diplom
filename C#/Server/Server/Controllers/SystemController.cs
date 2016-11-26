@@ -1,22 +1,20 @@
-﻿using System.Web.Http;
-using System.Web.Http.ModelBinding;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.OAuth;
-using DataBase;
-using DataTypes;
+﻿using DataBase;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using Newtonsoft.Json;
+using System.Web.Mvc;
 
 namespace Server.Controllers
 {
-    public class SystemController : ApiController
+    public class SystemController : Controller
     {
         [HttpGet]
-        public bool IsALife()
+        [ActionName("IsALife")]
+        public string IsALife()
         {
-            return SystemManager.IsALife();
+            return JsonConvert.SerializeObject(SystemManager.IsALife());
         }
     }
 }

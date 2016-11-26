@@ -8,11 +8,11 @@ namespace DataTypes
 {
     public class Post
     {
-        public int ID { get; set; }
+        public long ID { get; set; }
         public string url { get; set; }
         public double geoposition { get; set; }
         public double azimut { get; set; }
-        public long  date { get; set; }
+        public DateTime  date { get; set; }
         public int idCreator  { get; set; }
 
 public Post()
@@ -21,7 +21,7 @@ public Post()
             geoposition = 0;
             azimut = 0;
             idCreator = 0;
-            date = 0;
+            date = DateTime.Now;
         }
     }
 }

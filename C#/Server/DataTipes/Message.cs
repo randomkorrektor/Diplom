@@ -8,18 +8,18 @@ namespace DataTypes
 {
     public class Message
     {
-        public int ID { get; set; }
+        public long ID { get; set; }
         public string text { get; set; }
         public int idTo { get; set; }
         public int idFrom { get; set; }
-        public long date { get; set; }
+        public DateTime date { get; set; }
 
         public Message()
         {
             text = "";
             idTo = 0;
             idFrom = 0;
-            date = 0;
+            date = DateTime.Now;
         }
     }
 }

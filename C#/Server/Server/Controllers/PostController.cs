@@ -1,37 +1,38 @@
-﻿using System.Web.Http;
-using System.Web.Http.ModelBinding;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.OAuth;
-using DataBase;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Newtonsoft.Json;
+using System.Web;
+using System.Web.Mvc;
 using DataTypes;
+using DataBase;
 
 namespace Server.Controllers
 {
-    public class PostController : ApiController
+    public class PostController : Controller
     {
+
         [HttpGet]
-        public Post[] GetAllPosts()
+        [ActionName("GetAllPosts")]
+        public string GetAllPosts()
         {
-            return PostManager.GetAllPosts();
+            return JsonConvert.SerializeObject(PostManager.GetAllPosts());
         }
 
         [HttpPost]
-        public bool CreatePost(string url, double geoposition, double azimut, int idCreator)
+        [ActionName("CreatePost")]
+        public string CreatePost(string url, double geoposition, double azimut, int idCreator)
         {
             PostManager.CreatePost(url, geoposition, azimut, idCreator);
-            return true;
+            return JsonConvert.SerializeObject(true);
         }
 
         [HttpDelete]
-        public bool DeletePost(int id)
+        [ActionName("DeletePost")]
+        public string DeletePost(int id)
         {
             PostManager.DeletePost(id);
-            return true;
+            return JsonConvert.SerializeObject(true);
         }
-
     }
 }

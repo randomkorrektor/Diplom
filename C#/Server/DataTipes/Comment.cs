@@ -8,18 +8,18 @@ namespace DataTypes
 {
     public class Comment
     {
-        public int ID { get; set; }
+        public long ID { get; set; }
         public string text { get; set; }
         public int idCreator { get; set; }
         public int idPost { get; set; }
-        public long date { get; set; }
+        public DateTime date { get; set; }
 
         public Comment()
         {
             text = "";
             idCreator = 0;
             idPost = 0;
-            date = 0;
+            date = DateTime.Now;
         }
     }
 }

@@ -1,29 +1,29 @@
-﻿using System.Web.Http;
-using System.Web.Http.ModelBinding;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.OAuth;
-using DataBase;
+﻿using DataBase;
 using DataTypes;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Newtonsoft.Json;
+using System.Web;
+using System.Web.Mvc;
 
 namespace Server.Controllers
 {
-    public class MessageController : ApiController
+    public class MessageController : Controller
     {
         [HttpGet]
-        public Message[] GetMessageBox(int idUser)
+        [ActionName("GetMessageBox")]
+        public string GetMessageBox(int idUser)
         {
-            return MessageManager.GetMessageBox(idUser);
+            return JsonConvert.SerializeObject(MessageManager.GetMessageBox(idUser));
         }
 
         [HttpPost]
-        public bool CreateMessage(string text, int idTo, int idFrom)
+        [ActionName("CreateMessage")]
+        public string CreateMessage(string text, int idTo, int idFrom)
         {
             MessageManager.CreateMessage(text, idTo, idFrom);
-            return true;
+            return JsonConvert.SerializeObject(true);
         }
     }
 }

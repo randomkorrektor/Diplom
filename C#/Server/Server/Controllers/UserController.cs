@@ -1,45 +1,37 @@
-﻿using System;
+﻿using DataBase;
+using System;
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Threading.Tasks;
+using System.Linq;
 using System.Web;
-using System.Web.Http;
-using System.Web.Http.ModelBinding;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.OAuth;
-using DataBase;
-using DataTypes;
+using Newtonsoft.Json;
+using System.Web.Mvc;
 
 namespace Server.Controllers
 {
-   public class UserController : ApiController
+    public class UserController : Controller
     {
         [HttpPost]
-        public string Registration([FromUri]string email, [FromUri]string password, [FromUri]string nickname)
+        [ActionName("SignUp")]
+        public string SignUp(string email, string password, string nickname)
         {
             bool regQuestion = UserManager.Registration(email, password, nickname);
             if (regQuestion)
-                return UserManager.logIn(email, password);
+                return JsonConvert.SerializeObject(UserManager.logIn(email, password));
             else
-                return "Error";
-            
+                return JsonConvert.SerializeObject("Error");
+
         }
 
         [HttpGet]
-        public string LogIn([FromUri]string email,[FromUri]string password)
+        [ActionName("SignIn")]
+        public string SignIn(string email, string password)
         {
             string userNick = "";
-            userNick= UserManager.logIn(email, password);
-            if (userNick!="Error")
-                return userNick;
+            userNick = UserManager.logIn(email, password);
+            if (userNick != "Error")
+                return JsonConvert.SerializeObject("userNick");
             else
-                return "Error";
+                return JsonConvert.SerializeObject("Error");
         }
     }
 }

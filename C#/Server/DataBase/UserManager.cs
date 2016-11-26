@@ -23,7 +23,7 @@ namespace DataBase
                 email = email,
                 password = password,
                 nickname = nickname,
-                date = DateTime.Now.Ticks
+                date = DateTime.Now
             });
 
             Context.Instance.SaveChanges();

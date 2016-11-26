@@ -22,7 +22,7 @@ namespace DataBase
                 geoposition = geoposition,
                 azimut = azimut,
                 idCreator = idCreator,
-                date = DateTime.Now.Ticks
+                date = DateTime.Now
             });
 
             Context.Instance.SaveChanges();

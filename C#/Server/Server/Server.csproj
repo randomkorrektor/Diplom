@@ -201,7 +201,12 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\APILikeController.cs" />
+    <Compile Include="Controllers\APIMessageController.cs" />
     <Compile Include="Controllers\LikeController.cs" />
+    <Compile Include="Controllers\APIPostController.cs" />
+    <Compile Include="Controllers\APISystemController.cs" />
+    <Compile Include="Controllers\APIUserController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\SystemController.cs" />
@@ -227,6 +232,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Message\" />
+    <Folder Include="Views\MVCLike\" />
+    <Folder Include="Views\MVC\" />
+    <Folder Include="Views\Post\" />
+    <Folder Include="Views\System\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

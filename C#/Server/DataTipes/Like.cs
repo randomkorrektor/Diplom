@@ -8,7 +8,7 @@ namespace DataTypes
 {
     public class Like
     {
-        public int ID { get; set; }
+        public long ID { get; set; }
         public int idCreator { get; set; }
         public int idPost { get; set; }
 
